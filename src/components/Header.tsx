@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Car, Menu, X, User, Plus } from "lucide-react";
+import { Menu, X, User, Plus } from "lucide-react";
+import logo from "@/assets/logo.png";
 import { HeroButton } from "@/components/ui/hero-button";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -14,11 +15,13 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="p-2 bg-primary rounded-lg">
-              <Car className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold gradient-text">{t('brandName')}</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src={logo} 
+              alt="TashGO Logo" 
+              className="h-10 w-10 object-contain"
+            />
+            <span className="text-2xl font-bold gradient-text">TashGO</span>
           </div>
 
           {/* Desktop Navigation */}
