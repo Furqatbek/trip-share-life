@@ -4,13 +4,14 @@ import { HeroButton } from "@/components/ui/hero-button";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
 
   return (
-    <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-border z-50">
+    <header className="fixed top-0 w-full glass-effect z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -35,7 +36,8 @@ const Header = () => {
           </nav>
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
+            <ThemeToggle />
             <LanguageSwitcher />
             <Button variant="ghost" className="text-foreground hover:text-primary">
               <User className="mr-2 h-4 w-4" />
@@ -70,8 +72,9 @@ const Header = () => {
                 {t('howItWorks')}
               </a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <div className="px-2 py-1">
+                <div className="flex items-center justify-between px-2 py-1">
                   <LanguageSwitcher />
+                  <ThemeToggle />
                 </div>
                 <Button variant="ghost" className="justify-start">
                   <User className="mr-2 h-4 w-4" />
