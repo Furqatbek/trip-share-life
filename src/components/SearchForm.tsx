@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { MapPin, Calendar, Users, Search } from "lucide-react";
+import { MapPin, Calendar, Users, Search, Car } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const SearchForm = () => {
@@ -11,9 +12,10 @@ const SearchForm = () => {
   const [toLocation, setToLocation] = useState("");
   const [date, setDate] = useState("");
   const [passengers, setPassengers] = useState("1");
+  const [transportType, setTransportType] = useState("");
 
   const handleSearch = () => {
-    console.log("Searching rides:", { fromLocation, toLocation, date, passengers });
+    console.log("Searching rides:", { fromLocation, toLocation, date, passengers, transportType });
   };
 
   return (
@@ -81,25 +83,29 @@ const SearchForm = () => {
               className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
             />
           </div>
+        </div>
 
-          <div className="relative">
+        <div className="relative">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
-            {t('transportType')}
+            Transport Type
           </label>
           <div className="relative">
-            <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5" />
-            <Input
-              type="number"
-              min="1"
-              max="8"
-              value={passengers}
-              onChange={(e) => setPassengers(e.target.value)}
-              className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
-            />
+            <Car className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5 z-10" />
+            <Select value={transportType} onValueChange={setTransportType}>
+              <SelectTrigger className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors">
+                <SelectValue placeholder="Select transport" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="cab">Cab</SelectItem>
+                <SelectItem value="bus">Bus</SelectItem>
+                <SelectItem value="train">Train</SelectItem>
+                <SelectItem value="plane">Plane</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </div>
 
-        <HeroButton 
+        <HeroButton
           onClick={handleSearch}
           size="lg"
           className="h-11 sm:h-12 w-full touch-manipulation"
