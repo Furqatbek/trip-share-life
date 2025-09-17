@@ -2,9 +2,10 @@ export const translations = {
   en: {
     // Header
     brandName: "TashGO",
-    findRides: "Find Rides",
-    offerRide: "Offer Ride",
-    howItWorks: "How it Works",
+    onCab: "on cab",
+    onBus: "on bus", 
+    onTrain: "on train",
+    onPlane: "on plane",
     login: "Login",
     signUp: "Sign Up",
     
@@ -72,9 +73,10 @@ export const translations = {
   ru: {
     // Header
     brandName: "TashGO",
-    findRides: "Найти поездки",
-    offerRide: "Предложить поездку",
-    howItWorks: "Как это работает",
+    onCab: "на такси",
+    onBus: "на автобусе",
+    onTrain: "на поезде", 
+    onPlane: "на самолете",
     login: "Войти",
     signUp: "Регистрация",
     
@@ -142,9 +144,10 @@ export const translations = {
   uz: {
     // Header
     brandName: "TashGO",
-    findRides: "Yo'lovchilar topish",
-    offerRide: "Yo'lovchi taklif qilish",
-    howItWorks: "Qanday ishlaydi",
+    onCab: "taksida",
+    onBus: "avtobusda",
+    onTrain: "poyezdda",
+    onPlane: "samolyotda", 
     login: "Kirish",
     signUp: "Ro'yxatdan o'tish",
     

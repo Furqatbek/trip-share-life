@@ -25,20 +25,23 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
-              {t('findRides')}
+              {t('onCab')}
             </a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
-              {t('offerRide')}
+              {t('onBus')}
             </a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
-              {t('howItWorks')}
+              {t('onTrain')}
+            </a>
+            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+              {t('onPlane')}
             </a>
           </nav>
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <LanguageSwitcher />
             <Button variant="ghost" className="text-foreground hover:text-primary">
               <User className="mr-2 h-4 w-4" />
@@ -52,7 +55,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -61,16 +64,19 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-slide-up">
+          <div className="lg:hidden py-4 border-t border-border animate-slide-up">
             <nav className="flex flex-col space-y-4">
               <a href="#" className="text-foreground hover:text-primary transition-colors font-medium px-2 py-1">
-                {t('findRides')}
+                {t('onCab')}
               </a>
               <a href="#" className="text-foreground hover:text-primary transition-colors font-medium px-2 py-1">
-                {t('offerRide')}
+                {t('onBus')}
               </a>
               <a href="#" className="text-foreground hover:text-primary transition-colors font-medium px-2 py-1">
-                {t('howItWorks')}
+                {t('onTrain')}
+              </a>
+              <a href="#" className="text-foreground hover:text-primary transition-colors font-medium px-2 py-1">
+                {t('onPlane')}
               </a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <div className="px-2 py-1">
