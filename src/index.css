@@ -2,35 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* RideShare Design System - BlaBlaCar inspired
+/* RideConnect Design System - Modern Gradient Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 15% 25%;
+    --background: 0 0% 99%;
+    --foreground: 240 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 25%;
+    --card-foreground: 240 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 25%;
+    --popover-foreground: 240 10% 15%;
 
-    /* BlaBlaCar-inspired teal/blue primary */
-    --primary: 197 100% 48%;
+    /* Modern purple-to-orange gradient primary */
+    --primary: 259 94% 51%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 197 100% 85%;
-    --primary-dark: 197 100% 35%;
+    --primary-light: 259 94% 75%;
+    --primary-dark: 259 94% 35%;
 
-    --secondary: 210 20% 95%;
-    --secondary-foreground: 220 15% 25%;
+    --secondary: 20 100% 97%;
+    --secondary-foreground: 240 10% 15%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
 
-    --accent: 45 100% 95%;
-    --accent-foreground: 45 100% 25%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
 
     --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
@@ -41,19 +41,21 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 197 100% 48%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 259 94% 51%;
 
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(197 100% 60%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 20% 98%));
+    /* Modern gradient system */
+    --gradient-primary: linear-gradient(135deg, hsl(259 94% 51%), hsl(25 95% 53%));
+    --gradient-hero: linear-gradient(135deg, hsl(259 94% 51%) 0%, hsl(295 85% 60%) 50%, hsl(25 95% 53%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(259 20% 98%));
+    --gradient-surface: linear-gradient(135deg, hsl(259 100% 97%) 0%, hsl(25 100% 97%) 100%);
     
-    /* Shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(var(--primary) / 0.1);
-    --shadow-medium: 0 4px 16px -4px hsl(var(--primary) / 0.15);
-    --shadow-strong: 0 8px 32px -8px hsl(var(--primary) / 0.2);
+    /* Modern shadow system */
+    --shadow-soft: 0 2px 20px -2px hsl(259 94% 51% / 0.08);
+    --shadow-medium: 0 8px 30px -4px hsl(259 94% 51% / 0.12);
+    --shadow-strong: 0 20px 40px -8px hsl(259 94% 51% / 0.18);
+    --shadow-glow: 0 0 40px hsl(259 94% 51% / 0.15);
 
     --radius: 0.5rem;
 
@@ -75,51 +77,53 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 240 15% 6%;
     --foreground: 0 0% 95%;
 
-    --card: 220 25% 10%;
+    --card: 240 15% 8%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 25% 10%;
+    --popover: 240 15% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 197 100% 48%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 197 100% 75%;
-    --primary-dark: 197 100% 35%;
+    --primary: 259 94% 65%;
+    --primary-foreground: 240 15% 6%;
+    --primary-light: 259 94% 80%;
+    --primary-dark: 259 94% 45%;
 
-    --secondary: 220 20% 15%;
+    --secondary: 240 10% 12%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 45 100% 15%;
-    --accent-foreground: 45 100% 85%;
+    --accent: 25 95% 65%;
+    --accent-foreground: 240 15% 6%;
 
-    --success: 142 76% 45%;
+    --success: 142 76% 50%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 38 92% 60%;
-    --warning-foreground: 0 0% 100%;
+    --warning: 38 92% 65%;
+    --warning-foreground: 240 15% 6%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 0 75% 65%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 197 100% 48%;
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 259 94% 65%;
 
     /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(197 100% 60%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 25% 10%), hsl(220 20% 12%));
+    --gradient-primary: linear-gradient(135deg, hsl(259 94% 65%), hsl(25 95% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(259 94% 65%) 0%, hsl(295 85% 70%) 50%, hsl(25 95% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(240 15% 8%), hsl(240 10% 10%));
+    --gradient-surface: linear-gradient(135deg, hsl(259 30% 8%) 0%, hsl(25 30% 8%) 100%);
     
     /* Dark shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
-    --shadow-strong: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-soft: 0 2px 20px -2px hsl(0 0% 0% / 0.4);
+    --shadow-medium: 0 8px 30px -4px hsl(0 0% 0% / 0.5);
+    --shadow-strong: 0 20px 40px -8px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 40px hsl(259 94% 65% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -147,7 +151,8 @@ All colors MUST be HSL.
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+    @apply bg-clip-text text-transparent font-bold;
   }
 
   .card-shadow {
@@ -156,10 +161,19 @@ All colors MUST be HSL.
 
   .card-shadow-hover {
     box-shadow: var(--shadow-medium);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-shadow-glow {
+    box-shadow: var(--shadow-glow);
   }
 
   .hero-gradient {
     background: var(--gradient-hero);
+  }
+
+  .surface-gradient {
+    background: var(--gradient-surface);
   }
 
   .animate-float {

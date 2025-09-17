@@ -30,7 +30,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 surface-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -50,10 +50,10 @@ const HowItWorks = () => {
                 <div className="hidden lg:block absolute top-16 left-full w-full h-px bg-gradient-to-r from-primary to-primary/30 transform translate-x-4 z-0"></div>
               )}
               
-              <Card className="card-shadow hover:card-shadow-hover transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-white to-muted/30 relative z-10">
+              <Card className="card-shadow hover:card-shadow-glow transition-all duration-500 hover:-translate-y-3 border-0 bg-gradient-to-br from-white to-purple-50/30 relative z-10 group">
                 <CardContent className="p-8 text-center">
                   <div className="relative mb-6">
-                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-full hero-gradient text-white mb-4">
+                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-full hero-gradient text-white mb-4 group-hover:scale-110 transition-transform duration-300">
                       <step.icon className="h-10 w-10" />
                     </div>
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center text-sm font-bold text-accent-foreground">

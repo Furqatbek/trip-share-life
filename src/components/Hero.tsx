@@ -1,7 +1,7 @@
 import { ArrowRight, Shield, Users, Star } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import SearchForm from "@/components/SearchForm";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-image-modern.jpg";
 
 const Hero = () => {
   return (
@@ -36,12 +36,12 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center mb-12 animate-slide-up">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Your journey starts with a
-            <span className="block text-yellow-300">shared ride</span>
+            Connect, Share,
+            <span className="block gradient-text bg-gradient-to-r from-white to-orange-300 bg-clip-text text-transparent">Travel Together</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Connect with travelers, save money, and reduce your carbon footprint. 
-            Join millions who choose smarter, safer, and more social travel.
+            Experience the future of travel. Share rides, make connections, and discover 
+            a smarter way to reach your destination.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

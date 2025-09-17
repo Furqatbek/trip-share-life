@@ -15,7 +15,7 @@ const Header = () => {
             <div className="p-2 bg-primary rounded-lg">
               <Car className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-bold gradient-text">RideShare</span>
+            <span className="text-2xl font-bold gradient-text">RideConnect</span>
           </div>
 
           {/* Desktop Navigation */}
