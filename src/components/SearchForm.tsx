@@ -81,6 +81,22 @@ const SearchForm = () => {
               className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
             />
           </div>
+
+          <div className="relative">
+          <label className="block text-sm font-medium text-muted-foreground mb-2">
+            {t('transportType')}
+          </label>
+          <div className="relative">
+            <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5" />
+            <Input
+              type="number"
+              min="1"
+              max="8"
+              value={passengers}
+              onChange={(e) => setPassengers(e.target.value)}
+              className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
+            />
+          </div>
         </div>
 
         <HeroButton 
