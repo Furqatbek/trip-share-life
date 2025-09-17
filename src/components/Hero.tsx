@@ -35,17 +35,17 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="text-center mb-12 animate-slide-up">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
+        <div className="text-center mb-8 sm:mb-12 animate-slide-up">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             {t('heroTitle1')}
             <span className="block gradient-text bg-gradient-to-r from-white to-orange-300 bg-clip-text text-transparent">{t('heroTitle2')}</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
             {t('heroSubtitle')}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12">
             <HeroButton variant="secondary" size="lg">
               {t('findARide')}
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -56,18 +56,18 @@ const Hero = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 text-white/80 mb-16">
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-white/80 mb-8 sm:mb-16 px-4">
             <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5" />
-              <span className="text-sm font-medium">{t('verifiedDrivers')}</span>
+              <Shield className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="text-xs sm:text-sm font-medium">{t('verifiedDrivers')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Star className="h-5 w-5" />
-              <span className="text-sm font-medium">{t('averageRating')}</span>
+              <Star className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="text-xs sm:text-sm font-medium">{t('averageRating')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users className="h-5 w-5" />
-              <span className="text-sm font-medium">{t('happyTravelers')}</span>
+              <Users className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="text-xs sm:text-sm font-medium">{t('happyTravelers')}</span>
             </div>
           </div>
         </div>

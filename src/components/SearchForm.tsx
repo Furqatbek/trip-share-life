@@ -17,8 +17,8 @@ const SearchForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-4xl mx-auto p-6 card-shadow-hover bg-white/95 backdrop-blur-sm border-0">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+    <Card className="w-full max-w-4xl mx-auto p-4 sm:p-6 card-shadow-hover bg-white/95 backdrop-blur-sm border-0">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5 items-end">
         <div className="relative">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
             {t('from')}
@@ -30,7 +30,7 @@ const SearchForm = () => {
               placeholder={t('departureCityPlaceholder')}
               value={fromLocation}
               onChange={(e) => setFromLocation(e.target.value)}
-              className="pl-10 h-12 border-2 border-muted focus:border-primary transition-colors"
+              className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
             />
           </div>
         </div>
@@ -46,7 +46,7 @@ const SearchForm = () => {
               placeholder={t('destinationCityPlaceholder')}
               value={toLocation}
               onChange={(e) => setToLocation(e.target.value)}
-              className="pl-10 h-12 border-2 border-muted focus:border-primary transition-colors"
+              className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
             />
           </div>
         </div>
@@ -61,7 +61,7 @@ const SearchForm = () => {
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="pl-10 h-12 border-2 border-muted focus:border-primary transition-colors"
+              className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
             />
           </div>
         </div>
@@ -78,7 +78,7 @@ const SearchForm = () => {
               max="8"
               value={passengers}
               onChange={(e) => setPassengers(e.target.value)}
-              className="pl-10 h-12 border-2 border-muted focus:border-primary transition-colors"
+              className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors touch-manipulation"
             />
           </div>
         </div>
@@ -86,7 +86,7 @@ const SearchForm = () => {
         <HeroButton 
           onClick={handleSearch}
           size="lg"
-          className="h-12 w-full"
+          className="h-11 sm:h-12 w-full touch-manipulation"
         >
           <Search className="mr-2 h-5 w-5" />
           {t('search')}
