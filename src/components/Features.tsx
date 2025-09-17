@@ -1,60 +1,50 @@
-import { Shield, DollarSign, Users, Clock, MapPin, Star } from "lucide-react";
+import { Shield, DollarSign, Leaf, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const features = [
-  {
-    icon: Shield,
-    title: "Safe & Secure",
-    description: "All drivers are verified with license checks and user ratings for your safety.",
-    color: "text-green-600"
-  },
-  {
-    icon: DollarSign,
-    title: "Save Money",
-    description: "Split fuel costs and save up to 70% compared to traveling alone.",
-    color: "text-primary"
-  },
-  {
-    icon: Users,
-    title: "Meet People",
-    description: "Connect with like-minded travelers and make new friends on your journey.",
-    color: "text-purple-600"
-  },
-  {
-    icon: Clock,
-    title: "Flexible Times",
-    description: "Choose from multiple departure times that fit your schedule perfectly.",
-    color: "text-orange-600"
-  },
-  {
-    icon: MapPin,
-    title: "Door to Door",
-    description: "Get picked up and dropped off at convenient locations along the route.",
-    color: "text-pink-600"
-  },
-  {
-    icon: Star,
-    title: "Rated Community",
-    description: "Our rating system ensures quality experiences for both drivers and passengers.",
-    color: "text-yellow-600"
-  }
-];
 
 const Features = () => {
+  const { t } = useLanguage();
+  
+  const features = [
+    {
+      icon: Shield,
+      title: t('safeSecureTitle'),
+      description: t('safeSecureDescription'),
+      color: "text-green-600"
+    },
+    {
+      icon: DollarSign,
+      title: t('affordableTitle'),
+      description: t('affordableDescription'),
+      color: "text-primary"
+    },
+    {
+      icon: Leaf,
+      title: t('ecoFriendlyTitle'),
+      description: t('ecoFriendlyDescription'),
+      color: "text-green-500"
+    },
+    {
+      icon: Users,
+      title: t('communityTitle'),
+      description: t('communityDescription'),
+      color: "text-purple-600"
+    }
+  ];
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 surface-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Choose RideShare?
+            {t('featuresTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join the community that's revolutionizing the way we travel. 
-            Smart, safe, and social transportation for everyone.
+            {t('featuresSubtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">{/* Updated to 2 columns */}
           {features.map((feature, index) => (
             <Card key={index} className="card-shadow hover:card-shadow-hover transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
               <CardContent className="p-8 text-center">

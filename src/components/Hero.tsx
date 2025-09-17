@@ -1,9 +1,11 @@
 import { ArrowRight, Shield, Users, Star } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import SearchForm from "@/components/SearchForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-image-modern.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background with gradient overlay */}
@@ -36,21 +38,20 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center mb-12 animate-slide-up">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Connect, Share,
-            <span className="block gradient-text bg-gradient-to-r from-white to-orange-300 bg-clip-text text-transparent">Travel Together</span>
+            {t('heroTitle1')}
+            <span className="block gradient-text bg-gradient-to-r from-white to-orange-300 bg-clip-text text-transparent">{t('heroTitle2')}</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Experience the future of travel. Share rides, make connections, and discover 
-            a smarter way to reach your destination.
+            {t('heroSubtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <HeroButton variant="secondary" size="lg">
-              Find a Ride
+              {t('findARide')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </HeroButton>
             <HeroButton variant="outline" size="lg">
-              Offer a Ride
+              {t('offerARide')}
             </HeroButton>
           </div>
 
@@ -58,15 +59,15 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 text-white/80 mb-16">
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5" />
-              <span className="text-sm font-medium">Verified Drivers</span>
+              <span className="text-sm font-medium">{t('verifiedDrivers')}</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="h-5 w-5" />
-              <span className="text-sm font-medium">4.8★ Average Rating</span>
+              <span className="text-sm font-medium">{t('averageRating')}</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              <span className="text-sm font-medium">2M+ Happy Travelers</span>
+              <span className="text-sm font-medium">{t('happyTravelers')}</span>
             </div>
           </div>
         </div>

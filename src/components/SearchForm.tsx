@@ -3,8 +3,10 @@ import { MapPin, Calendar, Users, Search } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SearchForm = () => {
+  const { t } = useLanguage();
   const [fromLocation, setFromLocation] = useState("");
   const [toLocation, setToLocation] = useState("");
   const [date, setDate] = useState("");
@@ -19,13 +21,13 @@ const SearchForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
         <div className="relative">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
-            From
+            {t('from')}
           </label>
           <div className="relative">
             <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5" />
             <Input
               type="text"
-              placeholder="Departure city"
+              placeholder={t('departureCityPlaceholder')}
               value={fromLocation}
               onChange={(e) => setFromLocation(e.target.value)}
               className="pl-10 h-12 border-2 border-muted focus:border-primary transition-colors"
@@ -35,13 +37,13 @@ const SearchForm = () => {
 
         <div className="relative">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
-            To
+            {t('to')}
           </label>
           <div className="relative">
             <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5" />
             <Input
               type="text"
-              placeholder="Destination city"
+              placeholder={t('destinationCityPlaceholder')}
               value={toLocation}
               onChange={(e) => setToLocation(e.target.value)}
               className="pl-10 h-12 border-2 border-muted focus:border-primary transition-colors"
@@ -51,7 +53,7 @@ const SearchForm = () => {
 
         <div className="relative">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
-            Date
+            {t('date')}
           </label>
           <div className="relative">
             <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5" />
@@ -66,7 +68,7 @@ const SearchForm = () => {
 
         <div className="relative">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
-            Passengers
+            {t('passengers')}
           </label>
           <div className="relative">
             <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5" />
@@ -87,7 +89,7 @@ const SearchForm = () => {
           className="h-12 w-full"
         >
           <Search className="mr-2 h-5 w-5" />
-          Search
+          {t('search')}
         </HeroButton>
       </div>
     </Card>

@@ -1,44 +1,46 @@
 import { Search, MessageCircle, Car, ThumbsUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const steps = [
-  {
-    icon: Search,
-    title: "Search for Rides",
-    description: "Enter your departure and destination cities, select your travel date and find available rides.",
-    step: "01"
-  },
-  {
-    icon: MessageCircle,
-    title: "Book & Connect",
-    description: "Contact the driver, discuss pickup details, and confirm your booking with secure payment.",
-    step: "02"
-  },
-  {
-    icon: Car,
-    title: "Enjoy the Journey",
-    description: "Meet your driver and fellow passengers, relax, and enjoy your comfortable ride.",
-    step: "03"
-  },
-  {
-    icon: ThumbsUp,
-    title: "Rate Your Experience",
-    description: "Leave a review to help build trust in our community and improve future rides.",
-    step: "04"
-  }
-];
 
 const HowItWorks = () => {
+  const { t } = useLanguage();
+  
+  const steps = [
+    {
+      icon: Search,
+      title: t('step1Title'),
+      description: t('step1Description'),
+      step: "01"
+    },
+    {
+      icon: MessageCircle,
+      title: t('step2Title'),
+      description: t('step2Description'),
+      step: "02"
+    },
+    {
+      icon: Car,
+      title: t('step3Title'),
+      description: t('step3Description'),
+      step: "03"
+    },
+    {
+      icon: ThumbsUp,
+      title: t('step4Title'),
+      description: t('step4Description'),
+      step: "04"
+    }
+  ];
   return (
     <section className="py-20 surface-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            How It Works
+            {t('howItWorksTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Getting started is simple. Follow these easy steps to find your perfect ride 
-            or start offering rides to fellow travelers.
+            {t('howItWorksSubtitle')}
           </p>
         </div>
 
