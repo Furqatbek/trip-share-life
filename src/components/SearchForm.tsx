@@ -87,19 +87,19 @@ const SearchForm = () => {
 
         <div className="relative">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
-            Transport Type
+            {t('transportType')}
           </label>
           <div className="relative">
             <Car className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-5 w-5 z-10" />
             <Select value={transportType} onValueChange={setTransportType}>
               <SelectTrigger className="pl-10 h-11 sm:h-12 text-base border-2 border-muted focus:border-primary transition-colors">
-                <SelectValue placeholder="Select transport" />
+                <SelectValue placeholder={t('transportType')} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="cab">Cab</SelectItem>
-                <SelectItem value="bus">Bus</SelectItem>
-                <SelectItem value="train">Train</SelectItem>
-                <SelectItem value="plane">Plane</SelectItem>
+                <SelectItem value="cab">{t('cab')}</SelectItem>
+                <SelectItem value="bus">{t('bus')}</SelectItem>
+                <SelectItem value="train">{t('train')}</SelectItem>
+                <SelectItem value="plane">{t('plane')}</SelectItem>
               </SelectContent>
             </Select>
           </div>
