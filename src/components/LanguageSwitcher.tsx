@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const languages = [
   { code: 'uz', name: "O'zbek", flag: "🇺🇿" },
+  { code: 'uz-cyrl', name: 'Ўзбек', flag: '🇺🇿' },
   { code: 'ru', name: 'Русский', flag: '🇷🇺' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
 ];
